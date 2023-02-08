@@ -1,0 +1,13 @@
+name: saxa_env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - ipython
+  - jupyter
+  - xarray
+  - rasterio
+  - numpy
+  - pandas
+  - glob
+  - os
