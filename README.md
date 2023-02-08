@@ -31,7 +31,6 @@ Below contains the instructions for either running the project on your local mac
 
 ```
 
-*
 
 
 ### b) Noteable Cloud 
