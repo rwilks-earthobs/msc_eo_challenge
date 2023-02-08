@@ -5,17 +5,24 @@
 
 Below contains the instructions for either running the project on your local machine, or on UoE's cloud jupyter notebook service Noteable
 
-### a) Local Machine
+## A) Local Machine
 
-* We assume Anaconda or some Jupyter configuration is installed on your laptop.  
-  If not, link here...
+* We assume either Anaconda or Jupyter + Pip configuration is installed on your laptop.  
+  If not: https://docs.anaconda.com/anaconda/install/index.html
 
-* We assume Git setup.
-  If not, link here...
+* We assume Git command-line setup.
+  If not: https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
 
-* Clone the code repo from: 
+* Clone the code repo from: https://github.com/rwilks-earthobs/msc_eo_challenge
 
-* Download the data from: (This may be in repo)
+* Download the data from: https://github.com/rwilks-earthobs/msc_eo_challenge_data
+
+* From the download, move the folder **Faroe Islands Satellite Data** into the root of the cloned **msc_eo_challenge** folder
+
+* Navigate via Terminal (Mac) or Command Prompt (Windows) to the root of the cloned repo on your machine
+```bash
+cd Path/To/msc_eo_challenge   ## for windows, replace / with \\
+```
 
 * Create and activate a virtual environment to ensure clean package management using Conda (preferable) or Pip if not
 ```bash
@@ -30,7 +37,10 @@ Below contains the instructions for either running the project on your local mac
  pip install -r requirements.txt
 
 ```
+* Launch jupyter from inside your virtual environment
+```bash
+jupyter notebook
+```
 
 
-
-### b) Noteable Cloud 
+## B) Noteable Cloud 
