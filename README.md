@@ -17,7 +17,9 @@ Below contains the instructions for either running the project on your local mac
 
 * Download the data from: https://github.com/rwilks-earthobs/msc_eo_challenge_data
 
-* From the download, move the folder **Faroe Islands Satellite Data** into the root of the cloned **msc_eo_challenge** folder
+* From the download, move the folder **Faroe Islands Satellite Data** into the root of the cloned **msc_eo_challenge** folder. 
+
+    **!NOTE!: Do not rename any of the sub-folders within the Satellite Data folder, all of this is handled in the script**
 
 * Navigate via Terminal (Mac) or Command Prompt (Windows) to the root of the cloned repo on your machine
 ```bash
