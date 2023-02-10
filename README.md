@@ -79,5 +79,43 @@ def extract_from_zip(source, target):
 * This may throw errors
 * If this is the case, then you can either:
     * Manually rename the top level folders within Sentinel_2, Landsat 
-    * Use the code below to automatically remove all name after the characters '_N0400'
+    * Use the code below to automatically remove all characters after and including '_N0400':
 
+
+```python
+import os
+
+# Path from notebook to folder containing zipped folder for each day's data
+s2_imgs_folder = '.\\starter_data\\sentinel2'
+
+# TODO: Select your joiner - OS system dependant
+# MAC 
+#jn = '/'
+
+# WINDOWS
+jn = '\\'
+
+
+# For each filename in the s2_imgs_folder, if it contains the string below, then shorten
+for file_name in os.listdir(s2_imgs_folder):
+    file = ''
+    file = s2_imgs_folder + jn + file_name 
+
+    # find index of character
+    t = '_N0400'
+    ind = file.find(t)
+
+    # Renaming required
+    if ind>=0:
+        if file.endswith('zip'):
+            file_new = file[:ind] + '.zip'
+            
+        else:
+            file_new = file[:ind]
+            
+        #rename
+        os.rename(file, file_new)
+             
+# Check name shortened, and folders unzipped correctly        
+os.listdir(s2_imgs_folder)
+```
