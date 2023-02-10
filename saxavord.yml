@@ -12,3 +12,5 @@ dependencies:
   - glob
   - os
   - geopandas
+  - shapely
+  - descartes
