@@ -46,6 +46,7 @@ jupyter notebook
 
 ## Cloud Jupyter on UoE Notable
 
+TODO: Stuart providing access for this via LEARN
 \
 \
 \
@@ -61,9 +62,15 @@ jupyter notebook
 * The unzipped folder should keep the same name **starter_data**
 * This can be done manually in your folder explorer 
 
+# Optional: Downloading More Data
+Work with the existing data provided should provide something to work with, however if during the course of your analysis you would like to look at additional Sentinel 2 data, the guide provided in the repo:
+
+    How to Access Sentinel 2 Data - Copernicus Open Access Hub.pdf
+
+should provide support for this. 
 
 
-# Possible Issues: Filepath Too Long
+# Troubleshooting: Filepath Too Long
 
 * Satellite data is delivered in the nested folder structure you see in folders in **starter_data**
 * This means files located within a deeper level will have very long filepaths
