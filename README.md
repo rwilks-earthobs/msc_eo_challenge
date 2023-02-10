@@ -1,12 +1,11 @@
 
 # SaxaVord Earth Observation Challenge
 
-## Setup
+# Jupyter Setup
 
 Below contains the instructions for either running the project on your local machine, or on UoE's cloud jupyter notebook service Noteable
 
-## A) Local Machine
-
+## Jupter on your Local Machine
 * We assume either Anaconda or Jupyter + Pip configuration is installed on your laptop.  
   If not: https://docs.anaconda.com/anaconda/install/index.html
 
@@ -45,4 +44,40 @@ jupyter notebook
 ```
 
 
-## B) Noteable Cloud 
+## Cloud Jupyter on UoE Notable
+
+\
+\
+\
+\
+
+
+
+
+
+# Unzipping Data
+
+* In your cloned repo the folder **starter_data.zip** contains your data and requires unzipping
+* The unzipped folder should keep the same name **starter_data**
+* This can be done manually in your folder explorer on mac or via the python code below
+
+```python
+from zipfile import ZipFile
+
+# Function to extract source folder.zip to targer folder
+def extract_from_zip(source, target):
+    with ZipFile(source, 'r') as zip_ref:
+        zip_ref.extractall(target)     
+```
+
+
+
+# Possible Issues: Filepath Too Long
+
+* Satellite data is delivered in the nested folder structure you see in folders in **starter_data**
+* This means files located within a deeper level will have very long filepaths
+* This may throw errors
+* If this is the case, then you can either:
+    * Manually rename the top level folders within Sentinel_2, Landsat 
+    * Use the code below to automatically remove all name after the characters '_N0400'
+
