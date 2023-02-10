@@ -1,12 +1,11 @@
 
 # SaxaVord Earth Observation Challenge
 
-## Setup
+# Jupyter Setup
 
 Below contains the instructions for either running the project on your local machine, or on UoE's cloud jupyter notebook service Noteable
 
-## A) Local Machine
-
+## Jupter on your Local Machine
 * We assume either Anaconda or Jupyter + Pip configuration is installed on your laptop.  
   If not: https://docs.anaconda.com/anaconda/install/index.html
 
@@ -45,4 +44,69 @@ jupyter notebook
 ```
 
 
-## B) Noteable Cloud 
+## Cloud Jupyter on UoE Notable
+
+\
+\
+\
+\
+
+
+
+
+
+# Unzipping Data
+
+* In your cloned repo the folder **starter_data.zip** contains your data and requires unzipping
+* The unzipped folder should keep the same name **starter_data**
+* This can be done manually in your folder explorer 
+
+
+
+# Possible Issues: Filepath Too Long
+
+* Satellite data is delivered in the nested folder structure you see in folders in **starter_data**
+* This means files located within a deeper level will have very long filepaths
+* This may throw errors
+* If this is the case, then you can either:
+    * Manually rename the top level folders within Sentinel_2, Landsat 
+    * Use the code below to automatically remove all characters after and including '_N0400':
+
+
+```python
+import os
+
+# Path from notebook to folder containing zipped folder for each day's data
+s2_imgs_folder = '.\\starter_data\\sentinel2'
+
+# TODO: Select your joiner - OS system dependant
+# MAC 
+#jn = '/'
+
+# WINDOWS
+jn = '\\'
+
+
+# For each filename in the s2_imgs_folder, if it contains the string below, then shorten
+for file_name in os.listdir(s2_imgs_folder):
+    file = ''
+    file = s2_imgs_folder + jn + file_name 
+
+    # find index of character
+    t = '_N0400'
+    ind = file.find(t)
+
+    # Renaming required
+    if ind>=0:
+        if file.endswith('zip'):
+            file_new = file[:ind] + '.zip'
+            
+        else:
+            file_new = file[:ind]
+            
+        #rename
+        os.rename(file, file_new)
+             
+# Check name shortened, and folders unzipped correctly        
+os.listdir(s2_imgs_folder)
+```
