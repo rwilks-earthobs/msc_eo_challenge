@@ -59,16 +59,7 @@ jupyter notebook
 
 * In your cloned repo the folder **starter_data.zip** contains your data and requires unzipping
 * The unzipped folder should keep the same name **starter_data**
-* This can be done manually in your folder explorer on mac or via the python code below
-
-```python
-from zipfile import ZipFile
-
-# Function to extract source folder.zip to targer folder
-def extract_from_zip(source, target):
-    with ZipFile(source, 'r') as zip_ref:
-        zip_ref.extractall(target)     
-```
+* This can be done manually in your folder explorer 
 
 
 
