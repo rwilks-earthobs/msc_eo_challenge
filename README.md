@@ -28,7 +28,7 @@ cd Path/To/msc_eo_challenge   ## for windows, replace / with \\
 * Create and activate a virtual environment to ensure clean package management using Conda (preferable) or Pip if not
 ```bash
 # Conda
- conda env create --name saxa_env --file=saxavord.yml
+ conda env create --file saxavord.yml
  conda activate saxa_env
 ```
 ```bash
