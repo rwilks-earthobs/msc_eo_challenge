@@ -3,14 +3,14 @@ channels:
   - conda-forge
   - defaults
 dependencies:
+  - python=3.6
+  - glob2
   - ipython
   - jupyter
   - xarray
   - rasterio
   - numpy
   - pandas
-  - glob
-  - os
   - geopandas
   - shapely
   - descartes
