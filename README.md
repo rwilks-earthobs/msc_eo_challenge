@@ -42,16 +42,43 @@ cd Path/To/msc_eo_challenge   ## for windows, replace / with \\
 ```bash
 jupyter notebook
 ```
-
+<br />
 
 ## Cloud Jupyter on UoE Notable
 
-TODO: Stuart providing access for this via LEARN
-\
-\
-\
-\
+* Noteable spins up a virtual machine and jupyter notebook instance. 
+    * **Pros:** Potentially more space than your local machine
+    * **Cons:** Times you out after 1hour of inactivity, including leaving calculations to run.  Packages will need to be reinstall everytime the notebook is restarted.
+* Access: https://noteable.edina.ac.uk/launch
 
+* In the dropdown below *'Please select a personal notebook server'* select **GeoScience Notebook** and press Start
+
+* Select **+GitRepo** and in *Git Repository URL* put: https://github.com/rwilks-earthobs/msc_eo_challenge . You can leave the other sections blank, and select **Clone**
+
+* This should copy over the repo directly into the notebook.
+
+* TODO: Checking how to install packages for use in the jupyter 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 
 
