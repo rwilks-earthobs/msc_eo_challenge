@@ -22,7 +22,8 @@ Below contains the instructions for either running the project on your local mac
 
 * Navigate via Terminal (Mac) or Command Prompt (Windows) to the root of the cloned repo on your machine
 ```bash
-cd Path/To/msc_eo_challenge   ## for windows, replace / with \\
+cd Path\\To\\msc_eo_challenge   
+## for Mac replace \\ with /
 ```
 
 * Create and activate a virtual environment to ensure clean package management using Conda (preferable) or Pip if not
@@ -34,7 +35,7 @@ cd Path/To/msc_eo_challenge   ## for windows, replace / with \\
 ```bash
 # PIP
  python -m venv saxa_env
- venv\Scripts\activate ##Activates the env - windows or venv/bin/activate for Mac
+ venv\\Scripts\\activate ## For Mac: source venv/bin/activate 
  pip install -r requirements.txt
 
 ```
@@ -57,17 +58,55 @@ jupyter notebook
 
 * This should copy over the repo directly into the notebook.
 
-* TODO: Checking how to install packages for use in the jupyter 
+* Install packages for use via the command in jupyter
+```python
+!pip install -r requirements.txt
+```
+* Note that the filepaths & commands on noteable use the Mac variant (as opposed to Windows above)
+
+* Jupyter has no manual unzip functionality, so this needs to be done programatically in the notebook
+
+```python
+## Imports
+import os
+from zipfile import ZipFile
+
+## Helper functions
+def unzip_folder(fp_in, fp_out):
+    '''
+     Function to take a folder at filepath_in (fp_in) and unzips it to filepath_out (fp_out)
+     
+     Ideally should be 
+       fp_in  = Path/To/Folder.zip
+       fp_out = Path/To/Folder
+    '''
+    with ZipFile(fp_in, 'r') as zip_ref:
+        zip_ref.extractall(fp_out)
+
+## Params        
+# set data folder
+sen2dir = './starter_data/sentinel2/'
 
 
+## Run Unzip Process
+# get list of files & folders within this folder
+lst = os.listdir(sen2dir) 
+
+# for each file, if zip folder, unzip
+for file in lst:
+    
+    # Get complete filepath
+    file = sen2dir + file
+    print(f'Unzipping {file}')
+    
+    # Unzip if file ends in '.zip' (note this will override any previous unzip)
+    if file.endswith('.zip'):
+        fp_in = file
+        fp_out = file[:-4]
+        unzip_folder(fp_in, fp_out)
 
 
-
-
-
-
-
-
+```
 
  
 
@@ -76,9 +115,7 @@ jupyter notebook
 <br />
 <br />
 <br />
-<br />
-<br />
-<br />
+
 
 
 
@@ -90,11 +127,12 @@ jupyter notebook
 * This can be done manually in your folder explorer 
 
 # Optional: Downloading More Data
-Work with the existing data provided should provide something to work with, however if during the course of your analysis you would like to look at additional Sentinel 2 data, the guide provided in the repo:
+Work with the existing data provided should provide something to work with, however if during the course of your analysis you would like to look at additional Sentinel 2 data and Landsat data, the guide provided in the repo:
 
     How to Access Sentinel 2 Data - Copernicus Open Access Hub.pdf
 
-should provide support for this. 
+    How to Access Landsat Data - USGS EarthExplorer.pdf
+
 
 
 # Troubleshooting: Filepath Too Long
