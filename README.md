@@ -25,13 +25,13 @@ cd Path\\To\\msc_eo_challenge
 * Create and activate a virtual environment to ensure clean package management using Conda (preferable) or Pip if not
 ```bash
 # Conda
- conda env create --file saxavord.yml
+ conda env create --file=saxavord.yml
  conda activate saxa_env
 ```
 ```bash
 # PIP
  python -m venv saxa_env
- venv\\Scripts\\activate ## For Mac: source venv/bin/activate 
+ saxa_env\\Scripts\\activate ## For Mac: source venv/bin/activate 
  pip install -r requirements.txt
 
 ```

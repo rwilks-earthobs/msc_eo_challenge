@@ -1,0 +1,9 @@
+glob2
+ipython
+jupyter
+rasterio
+numpy
+geopandas
+shapely
+descartes
+rasterstats
