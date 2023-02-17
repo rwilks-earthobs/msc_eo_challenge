@@ -14,7 +14,11 @@ Below contains the instructions for either running the project on your local mac
 
 * Clone the code repo from: https://github.com/rwilks-earthobs/msc_eo_challenge
 
-* Manually unzip the data in **starter_data/sentinel2**, making sure unzipped data remain in this folder also.
+* Download the **starter_data** folder from (Ed Auth required, Access ends on Tuesday): https://uoe-my.sharepoint.com/:f:/g/personal/s2448783_ed_ac_uk/EtSOQI6UNp5Oi60_FA5lK8ABrcy8QsMge5gPs1PlQ3VnCw?e=tnes2r
+
+* Put the unzipped starter_data folder into your local repo. 
+
+* Manually unzip each folder within **starter_data/sentinel2/**, making sure unzipped folders remain here also.
 
 * Navigate via Terminal (Mac) or Command Prompt (Windows) to the root of the cloned repo on your machine
 ```bash
@@ -53,6 +57,10 @@ jupyter notebook
 * Select **+GitRepo** and in *Git Repository URL* put: https://github.com/rwilks-earthobs/msc_eo_challenge . You can leave the other sections blank, and select **Clone**
 
 * This should copy over the repo directly into the notebook.
+
+* Download the **starter_data** folder from (Ed Auth required, Access ends on Tuesday): https://uoe-my.sharepoint.com/:f:/g/personal/s2448783_ed_ac_uk/EtSOQI6UNp5Oi60_FA5lK8ABrcy8QsMge5gPs1PlQ3VnCw?e=tnes2r
+
+* Put the unzipped starter_data folder into the repo on noteable 
 
 * Install packages for use via the command in jupyter
 ```python
