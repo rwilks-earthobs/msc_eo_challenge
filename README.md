@@ -14,11 +14,7 @@ Below contains the instructions for either running the project on your local mac
 
 * Clone the code repo from: https://github.com/rwilks-earthobs/msc_eo_challenge
 
-* Download the data from: https://github.com/rwilks-earthobs/msc_eo_challenge_data
-
-* From the download, move the folder **Faroe Islands Satellite Data** into the root of the cloned **msc_eo_challenge** folder. 
-
-    **!NOTE!: Do not rename any of the sub-folders within the Satellite Data folder, all of this is handled in the script**
+* Manually unzip the data in **starter_data/sentinel2**, making sure unzipped data remain in this folder also.
 
 * Navigate via Terminal (Mac) or Command Prompt (Windows) to the root of the cloned repo on your machine
 ```bash
@@ -120,14 +116,9 @@ for file in lst:
 
 
 
-# Unzipping Data
 
-* In your cloned repo the folder **starter_data.zip** contains your data and requires unzipping
-* The unzipped folder should keep the same name **starter_data**
-* This can be done manually in your folder explorer 
-
-# Optional: Downloading More Data
-Work with the existing data provided should provide something to work with, however if during the course of your analysis you would like to look at additional Sentinel 2 data and Landsat data, the guide provided in the repo:
+# Downloading More Data
+Work with the existing data provided should provide something to work with, however if during the course of your analysis you would like to look at additional Sentinel 2 data and Landsat data, there are guides provided in the repo:
 
     How to Access Sentinel 2 Data - Copernicus Open Access Hub.pdf
 
